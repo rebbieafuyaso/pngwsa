@@ -1,0 +1,31 @@
+.timelineContainer {
+  background: var(--foreground);
+
+}
+.timeline {
+  max-width: 1000px;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+.timelineContainer h2 {
+  line-height: 3;
+  font-size: var(--text-xxl);
+  text-align: center;
+}
+.headingText {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  padding: 0 30px;
+  color: var(--accent);
+}
+@media (max-width: 798px) {
+  .timelineContainer h2 {
+  line-height: 1;
+  padding: 10px;
+  font-size: var(--text-xxl);
+}
+.headingText {
+  padding: 10px;
+}
+}
