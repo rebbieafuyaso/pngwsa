@@ -5,29 +5,32 @@ import { motion } from "framer-motion";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <header className={Styles.header}>
       {/* Logo */}
       <motion.div
-        initial={{ opacity: 0, y: -10 }}
+        initial={{ opacity: 0, y: -5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className={Styles.logoSection}
       >
         <img className={Styles.logoImg} src="/pngwsa.png" />
         <p>
-          <strong className={Styles.logo}>PNGWSA</strong>
+          <strong className={Styles.logo}>
+            <span>
+              Papua New Guinea
+            </span>
+            <span>
+              Wuhan Students Association
+            </span>
+          </strong>
         </p>
       </motion.div>
 
       {/* NAV */}
       <nav className={Styles.navbar}>
         <ul
-          className={`${Styles.navList} ${
-            isOpen ? Styles.active : ""
-          }`}
-        >
+          className={`${Styles.navList} ${isOpen ? Styles.active : "" }`}>
           {["/", "/about", "/news", "/contact"].map((path, i) => {
             const labels = ["Home", "About", "News and Blogs", "Contact"];
 

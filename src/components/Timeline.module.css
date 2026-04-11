@@ -1,31 +1,18 @@
 .timelineContainer {
-  background: var(--foreground);
-
-}
-.timeline {
-  max-width: 1000px;
+  padding: 10px;
   display: grid;
-  align-self: center;
-  justify-self: center;
+  justify-content: center;
 }
 .timelineContainer h2 {
-  line-height: 3;
-  font-size: var(--text-xxl);
+  font-size: var(--text-xxxl);
   text-align: center;
+  color: var(--red);
 }
 .headingText {
-  font-size: var(--text-lg);
   font-weight: 600;
-  padding: 0 30px;
-  color: var(--accent);
+  font-size: var(--text-xl);
 }
-@media (max-width: 798px) {
-  .timelineContainer h2 {
-  line-height: 1;
-  padding: 10px;
-  font-size: var(--text-xxl);
-}
-.headingText {
-  padding: 10px;
-}
+.timeline {
+    max-width: 1000px;
+    align-self: center;
 }

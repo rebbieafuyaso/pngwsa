@@ -2,6 +2,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from './pages/AboutPage';
 import NewsBlogs from './pages/NewsBlogs';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Header from "./components/Header";
+import './App.css'
 
 
 function App() {

@@ -24,9 +24,9 @@ const item = {
 function HomePage() {
   return(
     <>
-      <Header></Header>
+      <Header />
       <Hero />
-      <div className={Styles.aboutSections}>
+      <div className={Styles.aboutSection}>
         <div className={Styles.aboutUs}>
           <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -39,6 +39,7 @@ function HomePage() {
               initial={{opacity: 0, y: -10}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.5, ease: 'easeOut', delay: 0.7}}
+              className={Styles.sectionHeader}
               >Mission</motion.h6>
               <h2>Empowering PNG Students in <span className={Styles.red}>Wuhan</span></h2>
               <p>The Papua New Guinea Wuhan Students Association (PNGWSA) is the official student body representing Papua New Guinean students studying across universities in Wuhan, Hubei Province, China. We provide support, advocacy, and community for our members.</p>
@@ -107,7 +108,7 @@ function HomePage() {
         </div>
       </div>
       <div className={Styles.newsSection} >
-        <h6>Stay Updated</h6>
+        <h6 className={Styles.sectionHeader}>Stay Updated</h6>
         <h2>News &amp; Blogs</h2>
         <div className={Styles.container} >
           <div className={Styles.card} >

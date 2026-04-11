@@ -1,17 +1,17 @@
 import { useState } from "react";
-import AboutHero from "../components/AboutHero";
-import president from '/profile/president.png';
-import vicePresident from '/public/profile/vice-president.png';
-import CTGURep from '/public/profile/CTGU_rep.png';
-import secretary from '/public/profile/secretary.png';
-import eventsCoordinator from '/public/profile/events-coordinator.png';
-import mediaCoordinator from '/public/profile/media-coordinator.png';
-import treasurer from '/public/profile/treasurer.png';
+import president from '../assets/profile/president.png';
+import vicePresident from '../assets/profile/vice-president.png';
+import CTGURep from '../assets/profile/CTGU_rep.png';
+import secretary from '../assets/profile/secretary.png';
+import eventsCoordinator from '../assets/profile/events-coordinator.png';
+import mediaCoordinator from '../assets/profile/media-coordinator.png';
+import treasurer from '../assets/profile/treasurer.png';
 import Header from './../components/Header';
 import Styles from './AboutPage.module.css';
 import { TimeLine } from "../components/Timeline";
 import Footer from './../components/Footer';
 import MissionStatement from "../components/MissionStatement";
+import HeroComponent from "../components/HeroComponent";
 
 function AboutPage() {
   const [leaders, setLeaders] = useState(
@@ -70,7 +70,12 @@ function AboutPage() {
   return(
     <>
     <Header />
-      <AboutHero />
+      <HeroComponent
+      title={`Meet Our Teams, Know Our Values`}
+      subtitle={`About Us`}
+      text={`Meet the dedicated leaders of PNGWSA, discover how and when it was founded, and know about our values.`}
+        btnText={`Read More`}
+      />
       <MissionStatement />
       <h2 className={Styles.heading}>PNGWSA Executives</h2>
       <div className={Styles.profileContainer}>

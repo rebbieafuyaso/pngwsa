@@ -6,11 +6,11 @@ function Hero(){
     <>
       <div className={Styles.heroContainer}>
         <div className={Styles.heroOverlay}>
-          <motion.h6
+          <motion.h5
           initial={{opacity: 0, y: -15}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 1, ease: 'easeOut', delay: 0.3}}
-          >Established in Wuhan, China</motion.h6>
+          >Established in Wuhan, China</motion.h5>
           <motion.h1
           initial={{opacity: 0, y: -10}}
           animate={{opacity: 1, y: 0}}

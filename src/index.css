@@ -1,67 +1,61 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* Mobile First Responsiveness */
+
 :root {
   /* Font Sizes */
-  --text-xxxl: 56px;
-  --text-xxl: 48px;
-  --text-xl: 32px;
-  --text-lg: 20px;
-  --text-md: 18px;
-  --text-base: 18px;
-  --text-sm: 14px;
-  --text-xs: 10px;
+  --text-xxxxl: 2.5rem;
 
-  /* Background Colors */
-    --background: #bebebe;
-    --foreground: #fff;
-    --accent: #000;
-    --accent-second: rgb(211, 0, 0);
-    --accent-third: rgb(255, 230, 0);
+  --text-xxxl: 1.3rem;
+  --text-xxl: 1.2rem;
+  --text-xl: 0.9rem;
+  --text-lg: 0.8rem;
+  --text-base: 0.7rem;
+  --text-sm: 0.6rem;
+  --text-xs: 0.5rem;
 
-  /* Font */
+  /* Colors */
+  --bg: rgb(234, 234, 234);
+  --black: rgb(14, 13, 13);
+  --red: rgb(136, 0, 0);
+  --yellow: rgb(255, 251, 20);
+  --white: rgb(255, 255, 255);
+  --red-gradient: rgba(255, 171, 161, 0.5);
+  --grey: rgb(59, 59, 59);
+
+  /* Gradients */
+
+  /* Fonts */
   --main-font: 'Montserrat', sans-serif;
-  --second-font: 'Inter', sans-serif;
+  --accent-font: 'Inter', sans-serif;
+
+  overflow-x: hidden;
+
 }
-body {
-  background-color: var(--background);
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-h1, .h1, .heading {
-  font-size: var(--text-xxxl);
-  font-weight: 900;
-  padding: 20px;
-  font-family: var(--main-font);
-}
-p {
-  font-family: var(--main-font);
-  font-size: var(--text-base);
-  color: #727272;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
+@media screen and (min-width: 768px) {
+  :root {
+  --text-xxxxl: 2.5rem;
+
+  --text-xxxl: 2rem;
+  --text-xxl: 1.9rem;
+  --text-xl: 1.5rem;
+  --text-lg: 1.2rem;
+  --text-base: 1rem;
+  --text-sm: 0.9rem;
+  --text-xs: 0.8rem;
   }
 }
-@media (max-width: 789px) {
-:root {
-  /* Font Sizes */
-  --text-xxxl: 28px;
-  --text-xxl: 24px;
-  --text-xl: 20px;
-  --text-lg: 18px;
-  --text-md: 15px;
-  --text-base: 12px;
-  --text-sm: 10px;
-  --text-xs: 7px;
-  }
-  p {
-    font-size: var(--text-base);
+@media screen and (min-width: 1280px) {
+  :root {
+  --text-xxxxl: 2.5rem;
+  --text-xxxl: 3.2rem;
+  --text-xxl: 3rem;
+  --text-xl: 1.5rem;
+  --text-lg: 1.2rem;
+  --text-base: 1.1rem;
+  --text-xs: 0.9rem
   }
 }

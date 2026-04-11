@@ -1,0 +1,42 @@
+.heroComponentOverlay {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+.heroComponentOverlay h6 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  color: var(--yellow);
+}
+.heroComponentOverlay h2 {
+  text-align: center;
+}
+.heroComponentOverlay button {
+  width: 50%;
+  margin: 20px;
+  justify-self: center;
+  background: var(--yellow);
+  padding: 10px;
+  border: none;
+  font-size: var(--text-base);
+}
+@media screen and (max-width: 798px) {
+  .heroComponentOverlay {
+    padding: 50px;
+    text-align: center;
+  }
+}
+@media (min-width: 1280px) {
+  .heroComponentOverlay button {
+    width: 25%;
+  }
+  .heroComponentOverlay {
+    height: 50vh;
+  }
+}
+

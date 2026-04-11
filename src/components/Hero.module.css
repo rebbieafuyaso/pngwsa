@@ -1,111 +1,82 @@
 .heroContainer {
+  background: linear-gradient(#7b0000bf, #59000060), url('./../assets/hero.jpg');
   width: 100%;
-  min-height: 90vh;
-  background: linear-gradient(rgba(53, 0, 0, 0.726)) ,url(./../../public/hero-image.jpg);
+  height: auto;
+  background-size: cover;
   display: grid;
-  align-items: center;
-  place-content: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  padding: 20px;
 }
 .heroOverlay {
-    justify-items: center;
-    display: grid;
-    width: 900px;
-    text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  color: var(--white);
 }
-.heroOverlay h6 {
-  background-color: rgba(255, 255, 0, 0.199);
-  color: var(--accent-third);
-  text-align: center;
-  font-weight: 400;
-  font-family: var(--main-font);
-  padding: 20px;
-  width: 450px;
-  border-radius: 30px;
-  font-size: var(--text-base);
-  letter-spacing: 2px;
+.heroOverlay h5 {
+  color: var(--yellow);
+  font-weight: 200;
   text-transform: uppercase;
+  text-align: center;
+  padding: 5px;
+  background: rgba(255, 247, 0, 0.386);
+  width: 200px;
+  justify-self: center;
+  margin: 10px;
+  border-radius: 30px;
 }
 .heroOverlay h1 {
-  color: var(--foreground);
-  width: 500px;
   text-align: center;
+  font-size: var(--text-xxxl);
+  color: var(--white);
+  letter-spacing: 2px;
+  font-weight: 900;
 }
 .heroOverlay h1 span {
-  color: var(--accent-third);
+  color: var(--yellow);
 }
 .heroOverlay p {
-  color: var(--foreground);
-  font-size: var(--text-base);
-  font-family: var(--main-font);
-  font-weight: 400;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
 }
 .btnContainer {
-  padding: 50px;
-  width: 600px;
+  padding: 10px;
+  justify-content: center;
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
 }
 .btnContainer button {
-  padding: 15px 40px;
-  font-family: var(--second-font);
-  font-weight: 500;
+  padding: 7px 12px;
   font-size: var(--text-base);
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 500;
 }
 .primaryBtn {
-  background-color: var(--accent-third);
+  background-color: var(--yellow);
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-.primaryBtn:hover {
-  background-color: var(--foreground);
 }
 .secondaryBtn {
-    background-color: transparent;
-  border: var(--accent-third) 1px solid;
-  border-radius: 30px;
-  color: var(--foreground);
-  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
 }
-.secondaryBtn:hover {
-  background-color: var(--accent-third);
-  color: var(--accent);
+@media (min-width: 768px) {
+  .heroOverlay h5 {
+    padding: 15px;
+    width: 300px;
 }
-@media (max-width: 798px) {
-  .heroOverlay h6 {
-    padding: 10px;
-    margin: 10px 0 0 0;
-    width: auto;
-    font-size: var(--text-sm);
-  }
+}
+@media (min-width: 1280px) {
   .heroContainer {
-    place-content: start;
-    min-height: auto;
-    background-size: cover;
+    height: 95vh;
     background-position: center;
   }
   .heroOverlay {
-    width: 100%;
-    align-self: center;
-    place-self: center;
-
-  }
-  .heroOverlay h1 {
-    width: auto;
-    padding: 5px;
-    font-size: var(--text-lg);
+    justify-items: center;
+    gap: 10px;
   }
   .btnContainer button {
-    padding: 10px 20px;
-  }
-  .heroContainer p {
-    width: 400px;
-  }
-  .btnContainer {
-    width: auto;
-    gap: 10px;
+    padding: 15px 20px;
   }
 }

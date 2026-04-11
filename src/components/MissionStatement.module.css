@@ -1,24 +1,35 @@
-.MissionStatementContainer {
+.missionStatementContainer {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+  gap: 20px;
   text-align: center;
-  gap: 30px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.cards {
-  background-color: var(--foreground);
+.missionStatementContainer .cards {
+  padding: 20px;
+  background-color: var(--white);
   border-radius: 10px;
-  border-top: 5px solid var(--accent-third);
-  padding: 30px;
+  border-top: 5px solid var(--red);
 }
-.cards h3 {
-  font-family: var(--main-font);
-  line-height: 2;
-  padding: 10px;
-  color: var(--accent-second);
+.missionStatementContainer .cards h3 {
+  color: var(--red);
+  padding-bottom: 10px;
 }
-.cards p {
-  font-family: var(--second-font);
-  font-size: var(--text-sm);
+.missionStatementContainer .cards i {
+  font-size: var(--text-xxxxl);
+  color: var(--red);
+}
+.missionStatementContainer .cards p {
+  color: var(--grey);
+  font-weight: 500;
+}
+@media (min-width: 1280px) {
+  .missionStatementContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .cards {
+    width: 550px;
+  }
 }
