@@ -9,17 +9,27 @@
   padding: 20px;
   background-color: var(--white);
   border-radius: 10px;
-  border-top: 5px solid var(--red);
+  border-top: 10px solid var(--red);
 }
 .missionStatementContainer .cards h3 {
   color: var(--red);
   padding-bottom: 10px;
 }
 .missionStatementContainer .cards i {
-  font-size: var(--text-xxxxl);
   color: var(--red);
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--red);
+  display: flex;
+  justify-self: center;
+  width: 60px;
+  align-items: center;
+  aspect-ratio: 1;
+  justify-content: center;
 }
 .missionStatementContainer .cards p {
+  margin-top: 15x;
+  line-height: 1.5;
   color: var(--grey);
   font-weight: 500;
 }

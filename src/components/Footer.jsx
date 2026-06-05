@@ -12,7 +12,8 @@ function Footer() {
         <h4>Quick Links</h4>
         <ul className={Styles.footerList}>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Members</a></li>
           <li><a href="#">News and Blogs</a></li>
         </ul>
       </div>
@@ -30,6 +31,9 @@ function Footer() {
         <ul className={Styles.footerList}>
           <li><a href="#">PNG Embassy China</a></li>
           <li><a href="#">PNG STEM Program</a></li>
+          <li><a href="#">University Application</a></li>
+          <li><a href="#">Other Partnerships</a></li>
+
         </ul>
       </div>
         </div>

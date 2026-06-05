@@ -2,38 +2,43 @@ import { useState } from "react";
 import Styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars, faX} from '@fortawesome/free-solid-svg-icons';
+import { BookAIcon, Home, NewspaperIcon, Phone, UsersIcon,  } from 'lucide-react';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <header className={Styles.header}>
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, y: -5 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{opacity: 0, y:-5}}
+        viewport={{once: false}}
         transition={{ duration: 1 }}
         className={Styles.logoSection}
       >
         <img className={Styles.logoImg} src="/pngwsa.png" />
-        <p>
-          <strong className={Styles.logo}>
-            <span>
-              Papua New Guinea
-            </span>
-            <span>
-              Wuhan Students Association
-            </span>
-          </strong>
-        </p>
+        <p><strong className={Styles.logo}>
+          <span>
+            Papua New Guinea
+          </span>
+          <span>
+            Wuhan Students Association
+          </span>
+          </strong></p>
       </motion.div>
-
       {/* NAV */}
-      <nav className={Styles.navbar}>
+      <div className={`${Styles.navCanvas} ${isOpen ? Styles.active : ""}`}>
+        <nav className={Styles.navbar}>
         <ul
           className={`${Styles.navList} ${isOpen ? Styles.active : "" }`}>
-          {["/", "/about", "/news", "/contact"].map((path, i) => {
-            const labels = ["Home", "About", "News and Blogs", "Contact"];
-
+          {["/", "/about", "/members", "/news", "/contact"].map((path, i) => {
+            const labels = ["Home", "About", "Members", "News and Blogs", "Contact"];
+            const navIcons = [<Home />, <BookAIcon />, <UsersIcon />, <NewspaperIcon />, <Phone />];
             return (
               <motion.li
                 key={path}
@@ -45,24 +50,26 @@ function Header() {
                 }}
                 onClick={() => setIsOpen(false)}
               >
-                <Link to={path}>{labels[i]}</Link>
+                <Link className={Styles.links} to={path}>
+                <span className={Styles.linkContainer} >
+                  {navIcons[i]} {labels[i]}
+                </span></Link>
               </motion.li>
             );
           })}
         </ul>
-
+      </nav>
+      </div>
+                  
         {/* HAMBURGER */}
         <div
           className={`${Styles.hamburger} ${
-            isOpen ? Styles.open : ""
+            isOpen ? Styles.active : ''
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {!isOpen ? <FontAwesomeIcon icon={faBars}/> : <FontAwesomeIcon icon={faX}/>}
         </div>
-      </nav>
     </header>
   );
 }

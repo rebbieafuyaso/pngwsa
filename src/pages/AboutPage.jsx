@@ -1,20 +1,15 @@
-import { useState } from "react";
-import president from '../assets/profile/president.png';
-import vicePresident from '../assets/profile/vice-president.png';
-import CTGURep from '../assets/profile/CTGU_rep.png';
-import secretary from '../assets/profile/secretary.png';
-import eventsCoordinator from '../assets/profile/events-coordinator.png';
-import mediaCoordinator from '../assets/profile/media-coordinator.png';
-import treasurer from '../assets/profile/treasurer.png';
+import { useEffect, useState } from "react";
 import Header from './../components/Header';
 import Styles from './AboutPage.module.css';
 import { TimeLine } from "../components/Timeline";
 import Footer from './../components/Footer';
 import MissionStatement from "../components/MissionStatement";
 import HeroComponent from "../components/HeroComponent";
+import { api } from "../api";
+const STRAPI_URI = `http://localhost:1337`;
 
 function AboutPage() {
-  const [leaders, setLeaders] = useState(
+  /*const [leaders, setLeaders] = useState(
     [
     {
       id: 1,
@@ -66,7 +61,30 @@ function AboutPage() {
       bio: 'Your Bio Here...'
     }
   ]
-  )
+  ); */
+ const [executives, setExecutives] = useState([]);
+
+
+  useEffect(() => {
+  const getExecutives = async () => {
+    try {
+      const res = await api.get(`members`,
+        {
+          params: {
+            'filters[isExecutive][$eq]': true,
+            populate: "*"
+          }
+        },
+      );
+      setExecutives(res.data.data);
+      console.log("Data Here: ", res.data.data);
+    } catch (error) {
+      console.error("Error", error);
+      return [];
+    }
+  };
+  getExecutives();
+}, []);
   return(
     <>
     <Header />
@@ -80,16 +98,15 @@ function AboutPage() {
       <h2 className={Styles.heading}>PNGWSA Executives</h2>
       <div className={Styles.profileContainer}>
 
-        {leaders.map((leader) => {
-          return(
+        {executives.map((leader) => (
             <div className={Styles.profileCards} key={leader.id}>
-              <img src={leader.pic} alt="" />
-              <h3>{leader.name}</h3>
-              <p className={Styles.post}>{leader.post}</p>
+              <img src={`${STRAPI_URI}${leader.avatar?.url}`} alt="profile-pic"/>
+              <h3>{leader.fullname}</h3>
+              <p className={Styles.post}>{leader.position}</p>
               <p className={Styles.bio}>{leader.bio}</p>
             </div>
           )
-        })}
+        )}
       </div>
       <TimeLine />
       <Footer />

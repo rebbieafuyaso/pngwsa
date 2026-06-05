@@ -10,7 +10,10 @@
 }
 .headingText {
   font-weight: 600;
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+}
+.littleText {
+  font-size: var(--text-base);
 }
 .timeline {
     max-width: 1000px;

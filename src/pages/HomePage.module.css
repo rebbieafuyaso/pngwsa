@@ -1,6 +1,14 @@
-.aboutSection {
+.center {
+  text-align: center;
+  padding: 20px;
+}
+
+.sectionContainer {
+  border: 1px solid var(--light-border);
   padding: 10px;
+  margin: 10px;
   background-color: var(--white);
+  border-radius: 5px;
 }
 .container {
   display: grid;
@@ -8,17 +16,11 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
 }
-h6 {
-  text-transform: uppercase;
-  text-align: center;
-}
-.leftSection h2 {
-  font-size: var(--text-xxl);
+.sectionContainer h2 {
+  font-size: var(--text-xl);
+  line-height: 1.2;
 }
 .leftSection h2 span {
-  color: var(--red);
-}
-.sectionHeader {
   color: var(--red);
 }
 .containerGrid {
@@ -61,7 +63,8 @@ h6 {
   border-left: 5px solid var(--red);
   border-radius: 10px;
   gap: 10px;
-  height: 250px;
+  height: auto;
+  max-height: 400px;
 }
 .card h5 {
   padding: 5px;
@@ -96,16 +99,24 @@ h6 {
   .containerGrid {
     grid-template-columns: 1fr 1fr;
   }
+  .containerGrid .cards {
+    display: grid;
+    justify-content: center;
+  }
   .rightSection .container {
     grid-template-columns: 1fr 1fr;
   }
   .rightSection .container .cards {
     padding: 30px;
+    height: 90px;
   }
   .newsSection .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 10px;
+  }
+  .newsSection .container .cards {
+    height: 400px;
   }
 }
 @media (min-width: 1280px) {

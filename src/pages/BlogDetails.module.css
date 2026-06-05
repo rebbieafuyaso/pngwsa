@@ -1,0 +1,30 @@
+.blogTitle {
+  color: var(--red);
+  line-height: 1;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--primary-font);
+}
+.blogContainer {
+  z-index: 0;
+  display: grid;
+  padding: 10px;
+  place-content: center;
+}
+.blogDate {
+  color: var(--grey);
+  font-weight: 500;
+  padding: 10px;
+}
+.blogContent {
+  padding: 5px
+}
+.backBtn {
+  padding: 10px;
+  color: var(--black);
+  text-decoration: none;
+}
+.blogImg {
+  width: 100%;
+}

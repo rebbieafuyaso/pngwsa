@@ -1,0 +1,40 @@
+.flex-box {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  background-color: var(--white);
+}
+.btn {
+  background-color: transparent;
+}
+.flex-box input {
+  border: none;
+  border-radius: 0;
+  border-right: 1px solid var(--grey);
+}
+.form {
+  border-radius: 10px;
+  border: 1px solid var(--grey);
+  padding: 20px;
+  margin: 0 20px;
+  display: grid;
+  gap: 10px;
+}
+.form-element {
+  display: grid;
+  gap: 5px;
+}
+.form-element input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-element button {
+  padding: 10px;
+  background-color: var(--yellow);
+  border: 1px solid var(--grey);
+  font-weight: 500;
+}
+.forgot-pass {
+  color: blue;
+  text-align: center;
+}

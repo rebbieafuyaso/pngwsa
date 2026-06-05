@@ -1,0 +1,155 @@
+.form-signup {
+  border: 1px solid #ccc;
+  box-shadow: 2px 4px 8px #ccc;
+  box-sizing: border-box;
+  padding: 10px 40px;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  gap: 10px;
+  display: grid;
+  background-color: var(--white);
+}
+.loggin-in {
+  padding: 5px;
+  text-align: center;
+}
+.form-logo {
+  width: 40%;
+  display: flex;
+  justify-self: center;
+}
+.form-header {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--red);
+}
+.form-signup fieldset {
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}
+.form-element {
+  display: grid;
+  width: 100%;
+}
+.form-element input, .form-element select, .form-element textarea {
+  padding: 5px;
+  border: #cccccc 1px solid;
+  outline: none;
+  border-radius: 5px;
+}
+.form-element button {
+  padding: 5px;
+  background-color: var(--yellow);
+  border: #ccc solid 1px;
+  font-weight: 500;
+  width: 50%;
+  justify-self: center;
+  transition: all 0.3s ease;
+}
+.form-element button:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+.form-card {
+  padding: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  border-radius: 5px;
+  border: #bbb 1px solid;
+  background-color: var(--white);
+  display: grid;
+  gap: 20px;
+  max-width: 500px;
+}
+.error-para {
+  color: red;
+  text-shadow: 2px 4px 8px 20px red;
+}
+
+/* Confirmation Page */
+.email-confirmation {
+  padding: 10px;
+  margin: 20px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  height: 80vh;
+  gap: 20px;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+.verification-container {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.verification-container input {
+  padding: 7px;
+  display: flex;
+  border: 0px;
+  border-radius: 0;
+  
+}
+.verification-send-btn {
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--red);
+}
+.form-list {
+  padding: 0 20px;
+}
+.form-element p {
+  font-size: var(--text-base);
+  color: var(--grey);
+}
+.form-list li {
+  font-size: var(--btn-font);
+}
+.password-requirements {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+}
+.email-section {
+  margin-top: 10px;
+}
+.input-container {
+  background-color: #ffffff;
+  border: #bbb 1px solid;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.input-container input {
+  border: none;
+  background-color: #ffffff;
+}
+.input-container .code-box {
+  border-left: #bbb 1px solid;
+  border-radius:  0px 5px 5px 0px;
+}
+.confirmation-container {
+  padding: 20px;
+}
+.confirmation-container p {
+  text-align: center;
+  padding: 10px;
+}
+.success {
+  text-align: center;
+  color: rgb(38, 212, 38);
+  font-family: Montserrat;
+}
+.confirmation-container button {
+  text-align: center;
+  display: flex;
+  justify-self: center;
+  padding: 10px 40px;
+  font-weight: 600;
+  font-size: var(--btn-font);
+  border: #bbb;
+}

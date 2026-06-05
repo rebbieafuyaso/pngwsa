@@ -5,7 +5,7 @@
   background-size: cover;
   display: grid;
   background-position: center;
-  padding: 20px;
+  padding: 10px;
 }
 .heroOverlay {
   align-items: center;
@@ -15,22 +15,26 @@
 }
 .heroOverlay h5 {
   color: var(--yellow);
-  font-weight: 200;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   padding: 5px;
   background: rgba(255, 247, 0, 0.386);
-  width: 200px;
+  width: auto;
   justify-self: center;
   margin: 10px;
   border-radius: 30px;
+  font-size: var(--text-sm);
+  padding: 10px 20px;
 }
 .heroOverlay h1 {
+  line-height: 1;
+  padding: 20px;
   text-align: center;
   font-size: var(--text-xxxl);
   color: var(--white);
-  letter-spacing: 2px;
-  font-weight: 900;
+  font-weight: 700;
 }
 .heroOverlay h1 span {
   color: var(--yellow);
@@ -43,23 +47,37 @@
 .btnContainer {
   padding: 10px;
   justify-content: center;
-  display: flex;
+  display: grid;
+  width: 100%;
   gap: 20px;
 }
-.btnContainer button {
-  padding: 7px 12px;
-  font-size: var(--text-base);
-  border-radius: 10px;
-  font-weight: 500;
+.btnContainer a {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 12px;
+  font-weight: 600;
+  width: 50vw;
+  letter-spacing: 1px;
+  font-size: var(--btn-font);
 }
 .primaryBtn {
   background-color: var(--yellow);
+  color: var(--black);
   border: none;
+  transition: all 0.3s ease;
+}
+.primaryBtn:hover {
+  background-color: var(--white);
 }
 .secondaryBtn {
   background-color: transparent;
   border: 1px solid var(--yellow);
   color: var(--yellow);
+  transition: all 0.3s ease;
+}
+.secondaryBtn:hover {
+  background-color: var(--yellow);
+  color: var(--black);
 }
 @media (min-width: 768px) {
   .heroOverlay h5 {
@@ -71,12 +89,16 @@
   .heroContainer {
     height: 95vh;
     background-position: center;
+    align-items: center;
   }
   .heroOverlay {
     justify-items: center;
     gap: 10px;
   }
-  .btnContainer button {
-    padding: 15px 20px;
+  .btnContainer {
+    display: flex;
+  }
+  .btnContainer a {
+    width: 35%;
   }
 }

@@ -1,16 +1,18 @@
 /* Mobile First Responsiveness */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Font Sizes */
-  --text-xxxxl: 2.5rem;
-
-  --text-xxxl: 1.3rem;
-  --text-xxl: 1.2rem;
-  --text-xl: 0.9rem;
-  --text-lg: 0.8rem;
-  --text-base: 0.7rem;
-  --text-sm: 0.6rem;
-  --text-xs: 0.5rem;
+  --text-xxxl: 2rem;
+  --text-xxl: 1.7rem;
+  --text-xl: 1.5rem;
+  --text-lg: 1.25rem;
+  --text-base: 0.9rem;
+  --btn-font: 0.75rem;
+  --text-sm: 0.5rem;
+  --logo-text: 0.8rem;
 
   /* Colors */
   --bg: rgb(234, 234, 234);
@@ -19,9 +21,13 @@
   --yellow: rgb(255, 251, 20);
   --white: rgb(255, 255, 255);
   --red-gradient: rgba(255, 171, 161, 0.5);
-  --grey: rgb(59, 59, 59);
+  --grey: rgb(94, 94, 94);
 
   /* Gradients */
+  --yellow-accent-bg: ;
+
+  /* Border */
+  --light-border: rgba(0, 0, 0, 0.2);
 
   /* Fonts */
   --main-font: 'Montserrat', sans-serif;
@@ -33,6 +39,10 @@
 #root {
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
+}
+body, html {
+  width: 100%;
   overflow-x: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -56,6 +66,7 @@
   --text-xl: 1.5rem;
   --text-lg: 1.2rem;
   --text-base: 1.1rem;
-  --text-xs: 0.9rem
+  --text-sm: 0.7rem;
+  --btn-font: 0.8rem;
   }
 }

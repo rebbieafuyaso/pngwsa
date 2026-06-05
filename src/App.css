@@ -35,9 +35,16 @@ h5 {
   font-family: var(--accent-font);
 }
 h6 {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--red);
+  text-align: left;
 }
-p, .p, a {
+p, .p, a, li, label {
   font-size: var(--text-base);
+}
+button, a {
+  cursor: pointer;
 }

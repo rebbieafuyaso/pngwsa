@@ -1,0 +1,39 @@
+.newsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.newsContainer img {
+  width: 100%;
+}
+.dateContainer i {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--grey);
+  font-weight: 400;
+  font-size: var(--btn-font);
+}
+.newsCard {
+  border-top: 5px solid var(--red);
+  padding: 1rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0,0.5);
+}
+.newsCard h2 {
+  line-height: 1;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px;
+}
+.newsCard p {
+  font-size: var(--text-base);
+}
+.newsCard a {
+  color: var(--black);
+  line-height: 3.5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
