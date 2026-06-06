@@ -1,6 +1,39 @@
 .highlightContainer {
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+.highlightCard {
+  margin: 20px;
+  border-radius: 5px;
+  height: 100%;
+  gap: 10px;
+  height: auto;
+  max-height: 400px;
+  padding: 30px;
+  background-color: var(--red-gradient);
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+.card p {
+  color: var(--grey);
+}
+.card .date {
+  margin: 15px 0;
+  color: var(--grey);
+  font-size: var(--text-sm);
+}
+
+@media screen and (min-width: 1024px) {
+  .highlightContainer {
+  align-items: center;
+  justify-content: center;
   width: 50rem;
 }
 .highlightCard {
@@ -28,4 +61,5 @@ h3 {
   margin: 15px 0;
   color: var(--grey);
   font-size: var(--text-sm);
+}
 }

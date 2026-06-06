@@ -31,13 +31,19 @@
   padding: 20px;
   gap: 10px;
 }
+.blogContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem;
+}
 .cards {
   display: flex;
   justify-items: center;
   align-items: center;
   background-color: var(--red-gradient);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   color: var(--red);
 }
 .cards .left {
@@ -51,7 +57,9 @@
   display: flex;
 }
 .newsSection {
-  padding: 10px;
+  padding: 40px 20px;
+  border-top: 1px solid var(--light-border);
+
 }
 .newsSection h2 {
   padding: 10px 0;
@@ -61,26 +69,29 @@
   gap: 20px;
   padding: 10px;
 }
-.card {
+.blogCard {
   background-color: var(--white);
-  padding: 5px 20px;
+  padding: 15px;
   border-left: 5px solid var(--red);
-  border-radius: 10px;
+  border-radius: 5px;
   gap: 10px;
   height: auto;
-  max-height: 400px;
+  max-height: 1000px;
+  display: grid;
+  width: 100%;
+  object-fit: cover;
+
 }
-.card h5 {
-  padding: 5px;
-  background-color: var(--red-gradient);
-  color: var(--red);
-  border-radius: 10px;
-  text-align: center;
-  width: 50%;
-  margin: 10px 0;
+.blogImg {
+  width: 100%;
+  object-fit: cover;
+
+  height: 200px;
 }
-.card h4 {
+
+.blodCard h4 {
   padding: 10px 0;
+  font-weight: 400;
 }
 .card p {
   color: var(--grey);
@@ -157,5 +168,10 @@
 .sectionContainer2 {
   border-top: 1px solid var(--light-border);
   background-color: var(--white);
+}
+.blogImg {
+  width: 100%;
+  object-fit: contain;
+  height: 300px;
 }
 }

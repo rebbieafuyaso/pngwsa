@@ -9,7 +9,10 @@
 .blogContainer {
   z-index: 0;
   display: grid;
-  padding: 10px;
+  padding: 5rem 10rem;
+  margin: 5rem 20rem;
+  background-color: var(--white);
+  border: 1px solid var(--light-border);
   place-content: center;
 }
 .blogDate {
@@ -26,5 +29,8 @@
   text-decoration: none;
 }
 .blogImg {
+  display: flex;
+  justify-self: center;
   width: 100%;
+  max-width: 400px;
 }

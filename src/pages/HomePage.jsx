@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Styles from './HomePage.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGlobe, faUsers, faGraduationCap, faHeart, faCalendar, faArrowAltCircleRight} from '@fortawesome/fontawesome-free-solid';
-import ContactForm from "../components/ContactForm";
 import {motion} from 'motion/react';
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
@@ -18,7 +17,8 @@ const item = {
 
 function HomePage() {
   const API_URL = import.meta.env.VITE_STRAPI_URI;
-  const {data} = useFetch(`${API_URL}/blogs`);
+  const IMG_URI = import.meta.env.VITE_STRAPI;
+  const {data} = useFetch(`${API_URL}/blogs?populate=*`);
 
   return(
     <>
@@ -127,18 +127,19 @@ function HomePage() {
         </div>
       </div>
 
-    
+
 
       <div className={Styles.newsSection} >
         <h6 className={Styles.sectionHeader}>Stay Updated</h6>
         <h2>News &amp; Blogs</h2>
-        <div className={Styles.container} >
-        {data?.data?.map((blog) => (
-
-          <div key={blog.documentId} className={Styles.card} >
+        <div className={Styles.blogContainer} >
+        {data?.data?.map((blog) => {
+          console.log("For Blog Pic", `${IMG_URI}${blog.blogPic.url}`);
+          return (
+          <div key={blog.documentId} className={Styles.blogCard} >
             <div className={Styles.riddon}></div>
             <h4>{blog.title}</h4>
-            <img src={blog.coverImg} />
+            <img className={Styles.blogImg} src={`${IMG_URI}${blog.blogPic.url}`} alt={`${blog.slug}`}/>
             <p>{blog.excerpt}</p>
             <p className={Styles.date}>
               <i><FontAwesomeIcon icon={faCalendar} /></i>
@@ -146,13 +147,13 @@ function HomePage() {
             </p>
             <Link to={`/details/${blog.slug}`}>Read More</Link>
           </div>
-        ))}
+          )
+})}
       </div>
       <div className={Styles.moreBox}>
         <a href="#">View More <FontAwesomeIcon icon={faArrowAltCircleRight} /></a>
       </div>
         </div>
-        <ContactForm />
       <Footer />
     </>
   )
