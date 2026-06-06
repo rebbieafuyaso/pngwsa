@@ -21,7 +21,8 @@ footer {
 .column li {
   line-height: 2;
 }
-.footer ul li a {
+.footer ul li a, footer p {
+  font-size: var(--btn-font);
   color: var(--white);
   text-decoration: none;
 }

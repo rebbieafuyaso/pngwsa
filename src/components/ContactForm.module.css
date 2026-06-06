@@ -1,8 +1,8 @@
 .overlay {
-  background: red;
+  background: var(--white);
   padding: 10px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   width: 100%;
   height: 50%;
   justify-content: center;
@@ -12,16 +12,13 @@
 .overlay h2 {
   text-align: center;
   padding: 10px;
-  color: var(--yellow);
 }
 .overlay p {
-  color: var(--white);
   font-weight: 500;
   padding: 10px;
   max-width: 80%;
   justify-self: center;
   align-self: center;
-  text-align: center;
 }
 .overlay button {
   background-color: var(--yellow);
@@ -31,4 +28,13 @@
   align-self: center;
   font-size: var(--text-base);
   text-align: center;
+}
+.connectContainer {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+.connectContainer button {
+  display: flex;
+  justify-self: center;
 }

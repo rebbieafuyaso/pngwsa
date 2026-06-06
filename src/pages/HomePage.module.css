@@ -25,6 +25,7 @@
 }
 .leftSection h2 span {
   color: var(--red);
+  z-index: 0;
 }
 .containerGrid {
   display: grid;
@@ -59,7 +60,6 @@
 .newsSection {
   padding: 40px 20px;
   border-top: 1px solid var(--light-border);
-
 }
 .newsSection h2 {
   padding: 10px 0;
@@ -173,5 +173,9 @@
   width: 100%;
   object-fit: contain;
   height: 300px;
+}
+.newsSection {
+  padding: 2rem 10rem;
+  border-top: 1px solid var(--light-border);
 }
 }

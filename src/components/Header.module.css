@@ -32,6 +32,7 @@
   transition: all 0.3s ease-out;
 }
 .navCanvas.active {
+  z-index: 1;
   position: absolute;
   right: 0;
   top: 90px;

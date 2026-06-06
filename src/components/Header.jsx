@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons';
-import { BookAIcon, Home, NewspaperIcon, Phone, UsersIcon,  } from 'lucide-react';
+import { BookAIcon, Home, LogInIcon, NewspaperIcon, Phone, UsersIcon,  } from 'lucide-react';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +36,9 @@ function Header() {
         <nav className={Styles.navbar}>
         <ul
           className={`${Styles.navList} ${isOpen ? Styles.active : "" }`}>
-          {["/", "/about", "/members", "/news", "/contact", "/create-account"].map((path, i) => {
+          {["/", "/about", "/members", "/news", "/contact", "/login"].map((path, i) => {
             const labels = ["Home", "About", "Members", "News and Blogs", "Contact", "Sign Up"];
-            const navIcons = [<Home />, <BookAIcon />, <UsersIcon />, <NewspaperIcon />, <Phone />];
+            const navIcons = [<Home size={20} />, <BookAIcon size={20} />, <UsersIcon size={20} />, <NewspaperIcon size={20} />, <Phone size={20} />, <LogInIcon size={20} />];
             return (
               <motion.li
                 key={path}

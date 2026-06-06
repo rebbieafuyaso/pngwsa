@@ -8,6 +8,7 @@ import {motion} from 'motion/react';
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import Highlights from "../components/Highlights";
+import ContactForm from "../components/ContactForm";
 
 
 const item = {
@@ -153,7 +154,8 @@ function HomePage() {
       <div className={Styles.moreBox}>
         <a href="#">View More <FontAwesomeIcon icon={faArrowAltCircleRight} /></a>
       </div>
-        </div>
+      </div>
+      <ContactForm />
       <Footer />
     </>
   )
