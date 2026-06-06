@@ -5,7 +5,7 @@
 
 .sectionContainer {
   border: 1px solid var(--light-border);
-  padding: 10px;
+  padding: 1rem;
   margin: 10px;
   background-color: var(--white);
   border-radius: 5px;
@@ -13,11 +13,14 @@
 .container {
   display: grid;
   align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+  position: relative;
+  width: 100%;
 }
 .sectionContainer h2 {
-  font-size: var(--text-xl);
+  font-size: var(--text-xxl);
   line-height: 1.2;
 }
 .leftSection h2 span {
@@ -30,6 +33,7 @@
 }
 .cards {
   display: flex;
+  justify-items: center;
   align-items: center;
   background-color: var(--red-gradient);
   padding: 10px;
@@ -95,6 +99,9 @@
   color: var(--red);
   text-align: center;
 }
+.newLogo {
+  border-radius: 50%;
+}
 @media (min-width: 620px) {
   .containerGrid {
     grid-template-columns: 1fr 1fr;
@@ -126,4 +133,29 @@
   .newsSection .container .card {
     width: 600px;
   }
+  .sectionContainer {
+  border: 1px solid var(--light-border);
+  padding: 3rem;
+  }
+  .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  }
+  .container {
+  gap: 20px;
+  padding: 3rem;
+  }
+  .sectionContainer {
+  border: 1px solid var(--light-border);
+  padding: 1rem;
+  margin: 5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.sectionContainer2 {
+  border-top: 1px solid var(--light-border);
+  background-color: var(--white);
+}
 }

@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Styles from './HomePage.module.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGlobe, faUsers, faGraduationCap, faHeart, faPlus, faBuilding, faCalendar, faArrowAltCircleRight} from '@fortawesome/fontawesome-free-solid';
+import {faGlobe, faUsers, faGraduationCap, faHeart, faCalendar, faArrowAltCircleRight} from '@fortawesome/fontawesome-free-solid';
 import ContactForm from "../components/ContactForm";
 import {motion} from 'motion/react';
 import useFetch from "../hooks/useFetch";
@@ -19,9 +19,6 @@ const item = {
 function HomePage() {
   const API_URL = import.meta.env.VITE_STRAPI_URI;
   const {data} = useFetch(`${API_URL}/blogs`);
-  console.log(data);
-
-
 
   return(
     <>
@@ -121,35 +118,16 @@ function HomePage() {
               viewport={{once: false}}
               transition={{duration: 1}}
             className={Styles.rightSection}>
-              <img src="./pngwsa.png" alt="" />
+              <img className={Styles.newLogo} src="./papua-new-guinea-wuhan-students-association-new-logo.png" alt="pngwsa-logo" />
               <div className={Styles.container}>
-                <div className={Styles.cards}>
-                  <div className={Styles.left}>
-                    <i><FontAwesomeIcon icon={faPlus} /></i>
-                  </div>
-                  <div className={Styles.right}>
-                    <h4>60+ Active Students</h4>
-                  </div>
-                </div>
-                <div className={Styles.cards}>
-                  <div className={Styles.left}>
-                    <i><FontAwesomeIcon icon={faBuilding} /></i>
-                  </div>
-                  <div className={Styles.right}>
-                    <h4>7+ Universities across Wuhan</h4>
-                  </div>
-                </div>
+                <Highlights />
               </div>
             </motion.div>
           </div>
         </div>
       </div>
 
-      <div className={``}>
-        <div className={Styles.center}>
-          <Highlights />
-        </div>
-      </div>
+    
 
       <div className={Styles.newsSection} >
         <h6 className={Styles.sectionHeader}>Stay Updated</h6>

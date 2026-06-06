@@ -79,7 +79,11 @@
   display: block;
   transition: opacity 0.3s ease;
   font-size: var(--btn-font);
-
+  transition: all 0.3s ease-in-out;
+}
+.links:hover {
+  color: var(--yellow);
+  font-weight: bold;
 }
 .hamburger {
   align-items: center;
@@ -91,6 +95,15 @@
 }
 
 @media  screen and (min-width: 1280px) {
+  .header {
+  height: 150px;
+  align-items: center;
+  }
+  .logoImg {
+  max-width: 100px;
+  width: 100%;
+  max-height: auto;
+  }
   .navList {
     display: flex;
     flex-direction: row;

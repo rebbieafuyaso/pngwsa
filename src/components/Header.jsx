@@ -36,8 +36,8 @@ function Header() {
         <nav className={Styles.navbar}>
         <ul
           className={`${Styles.navList} ${isOpen ? Styles.active : "" }`}>
-          {["/", "/about", "/members", "/news", "/contact"].map((path, i) => {
-            const labels = ["Home", "About", "Members", "News and Blogs", "Contact"];
+          {["/", "/about", "/members", "/news", "/contact", "/create-account"].map((path, i) => {
+            const labels = ["Home", "About", "Members", "News and Blogs", "Contact", "Sign Up"];
             const navIcons = [<Home />, <BookAIcon />, <UsersIcon />, <NewspaperIcon />, <Phone />];
             return (
               <motion.li
