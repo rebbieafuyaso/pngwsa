@@ -3,7 +3,7 @@ import Styles from './ContactForm.module.css'
 function ContactForm() {
   return(
       <div className={Styles.overlay}>
-        <div>
+        <div className={Styles.rightSide}>
           <h6>Contact</h6>
           <h2>Contact Us</h2>
           <form className='form-signup'>

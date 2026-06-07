@@ -21,24 +21,19 @@ h3 {
   text-align: center;
   padding: 10px 0;
 }
-.card p {
-  color: var(--grey);
-}
-.card .date {
-  margin: 15px 0;
-  color: var(--grey);
-  font-size: var(--text-sm);
-}
 
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 1280px) {
   .highlightContainer {
-  align-items: center;
+  width: 45rem;
+  margin: 0px;
+  display: flex;
   justify-content: center;
-  width: 50rem;
 }
 .highlightCard {
-  border-radius: 5px;
-  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  width: 90%;
   height: 100%;
   gap: 10px;
   height: auto;
@@ -48,18 +43,7 @@ h3 {
   justify-content: center;
   display: flex;
   text-align: center;
+  margin: 0;
   flex-direction: column;
-}
-h3 {
-  text-align: center;
-  padding: 10px 0;
-}
-.card p {
-  color: var(--grey);
-}
-.card .date {
-  margin: 15px 0;
-  color: var(--grey);
-  font-size: var(--text-sm);
 }
 }

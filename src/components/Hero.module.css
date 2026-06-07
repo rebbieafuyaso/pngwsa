@@ -101,4 +101,7 @@
   .btnContainer a {
     width: 35%;
   }
+  .heroOverlay p {
+  width: 50%;
+}
 }

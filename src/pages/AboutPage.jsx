@@ -6,64 +6,11 @@ import Footer from './../components/Footer';
 import MissionStatement from "../components/MissionStatement";
 import HeroComponent from "../components/HeroComponent";
 import { api } from "../api";
+import { Network } from "lucide-react";
 const STRAPI_URI = `http://localhost:1337`;
 
 function AboutPage() {
-  /*const [leaders, setLeaders] = useState(
-    [
-    {
-      id: 1,
-      pic: president,
-      name: 'Betty Wakia',
-      post: 'PNGWSA President',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 2,
-      pic: vicePresident,
-      name: 'Victor Jima',
-      post: 'PNGWSA Vice President',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 3,
-      pic: CTGURep,
-      name: 'Samuel Valuka',
-      post: 'CTGU Students Rep',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 4,
-      pic: secretary,
-      name: 'Michelle Kiungu',
-      post: 'Secretary',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 5,
-      pic: eventsCoordinator,
-      name: 'Natasha Malien',
-      post: 'Events and Programs Coordinator',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 6,
-      pic: treasurer,
-      name: 'Machintosh Milba',
-      post: 'Tresurer',
-      bio: 'Your Bio Here...'
-    },
-    {
-      id: 7,
-      pic: mediaCoordinator,
-      name: 'Samuel Awore Samson',
-      post: 'Media Coordinator',
-      bio: 'Your Bio Here...'
-    }
-  ]
-  ); */
  const [executives, setExecutives] = useState([]);
-
 
   useEffect(() => {
   const getExecutives = async () => {
@@ -94,8 +41,24 @@ function AboutPage() {
       text={`Meet the dedicated leaders of PNGWSA, discover how and when it was founded, and know about our values.`}
         btnText={`Read More`}
       />
+      <div className={Styles.sectionContainer}>
+        <div>
+          <h6>About</h6>
+          <h2>Who we are...</h2>
+          <p>The PNG Wuhan Students Association is a student-led organization made up of Papua New Guinean students studying in Wuhan, China. Established to support and unite PNG students, the association is run entirely by students and is dedicated to promoting the welfare, academic success, and personal development of its members.
+          <br /><br />
+          Our mission is to create a supportive and inclusive environment that helps students adapt to life and study in China. We provide guidance, mentorship, and assistance to students throughout their academic journey, ensuring they have access to the resources and support needed to succeed.
+          <br /><br />
+          The association actively advocates for the welfare of PNG students, organizes educational and cultural activities, and fosters a strong sense of community among members. We also work closely with relevant government agencies, educational institutions, and partners to create opportunities for Papua New Guinean students.
+          <br /><br />
+          One of our key areas of collaboration is supporting government initiatives that provide access to top universities in China through STEM (Science, Technology, Engineering, and Mathematics) scholarship programs. Through these partnerships, we help facilitate opportunities for talented students to pursue high-quality education and contribute to the future development of Papua New Guinea.
+          <br /><br />
+          The PNG Wuhan Students Association remains committed to empowering students, strengthening academic excellence, promoting cultural exchange, and building future leaders who will make meaningful contributions to their communities and nation.</p>
+        </div>
+        <div></div>
+      </div>
       <MissionStatement />
-      <h2 className={Styles.heading}>PNGWSA Executives</h2>
+      <h3 className={Styles.heading}>PNGWSA Executives</h3>
       <div className={Styles.profileContainer}>
 
         {executives.map((leader) => (
@@ -109,6 +72,12 @@ function AboutPage() {
         )}
       </div>
       <TimeLine />
+      <div className={Styles.sectionContainer}>
+        <div>
+          <h2><Network size={40}/> Meet Our Alumni</h2>
+          <p>Our alumni are proud graduates who have completed their studies in China and are now contributing to their professions and communities. Through their achievements, experiences, and mentorship, they continue to inspire and support current PNG students on their academic and career journeys.</p>
+        </div>
+      </div>
       <Footer />
     </>
   )

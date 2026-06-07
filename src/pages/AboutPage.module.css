@@ -32,3 +32,10 @@
 .profileContainer .profileCards .post {
   font-weight: 700;
 }
+.sectionContainer {
+  border: 1px solid var(--light-border);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--white);
+  border-radius: 5px;
+}

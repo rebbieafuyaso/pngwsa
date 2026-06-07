@@ -1,6 +1,6 @@
 .overlay {
   background: var(--white);
-  padding: 10px;
+  padding: 30px 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   width: 100%;
@@ -37,4 +37,7 @@
 .connectContainer button {
   display: flex;
   justify-self: center;
+}
+.rightSide {
+  padding: 0 10px;
 }

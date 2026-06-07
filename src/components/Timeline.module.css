@@ -4,13 +4,12 @@
   justify-content: center;
 }
 .timelineContainer h2 {
-  font-size: var(--text-xxxl);
   text-align: center;
   color: var(--red);
+  line-height: 1;
 }
 .headingText {
   font-weight: 600;
-  font-size: var(--text-lg);
 }
 .littleText {
   font-size: var(--text-base);

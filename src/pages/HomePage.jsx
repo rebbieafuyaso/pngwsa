@@ -127,9 +127,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-
-
+      
       <div className={Styles.newsSection} >
         <h6 className={Styles.sectionHeader}>Stay Updated</h6>
         <h2>News &amp; Blogs</h2>
