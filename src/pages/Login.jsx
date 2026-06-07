@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { api } from "../api";
 import FormHeader from "./../components/FormHeader";
+import { Link } from "react-router-dom";
 
 function Login() {
   
@@ -99,7 +100,7 @@ if (!data.member?.isOnboarded) {  // ← Fixed: use data, not userData.data
         </button>
       </div>
       <div className="form-element">
-        <p>Don't have an account? <a href="/create-account">Sign Up Now</a></p>
+        <p>Don't have an account? <Link to="/create-account">Sign Up Now</Link></p>
         <p><a href="/reset-password">Reset password</a></p>
       </div>
     </form>
