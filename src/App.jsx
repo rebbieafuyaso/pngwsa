@@ -31,7 +31,7 @@ function App() {
 
         {/* Authentication routes */}
         <Route path="/login" element={<LogIn />} />
-        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/account" element={<CreateAccount />} />
         <Route path="/reset-password" element={<ForgetPassword />} />
         <Route path="/confirmation-page" element={<ConfirmEmail />} />
         

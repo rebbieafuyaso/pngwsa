@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Styles from './Footer.module.css';
 
 function Footer() {
@@ -7,6 +8,7 @@ function Footer() {
         <div className={Styles.column}>
         <h4>Papua New Guinea Wuhan Students Association</h4>
         <p>Empowering Students in Papua New Guinea to pursue the highest quality education</p>
+        <Link to={'/account'}>Members Login</Link>
       </div>
       <div className={Styles.column}>
         <h4>Quick Links</h4>

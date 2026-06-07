@@ -2,6 +2,7 @@ import { useState } from "react"
 import { api } from "../api";
 import FormHeader from "./../components/FormHeader";
 import { Link } from "react-router-dom";
+const STRAPI_URI = import.meta.env.VITE_STRAPI_URI; 
 
 function Login() {
   
@@ -35,7 +36,7 @@ function Login() {
       //  Step 2: Get user data with member profile (use GET, not POST)
       // Step 2: Get user data with member profile
 const token = localStorage.getItem('jwt');
-const userData = await fetch(`http://localhost:1337/api/auth/me`, {
+const userData = await fetch(`${STRAPI_URI}/auth/me`, {
     method: 'GET',
     headers: { 
         'Authorization': `Bearer ${token}`,
@@ -100,7 +101,7 @@ if (!data.member?.isOnboarded) {  // ← Fixed: use data, not userData.data
         </button>
       </div>
       <div className="form-element">
-        <p>Don't have an account? <Link to="/create-account">Sign Up Now</Link></p>
+        <p>Don't have an account? <Link to="/account">Sign Up Now</Link></p>
         <p><a href="/reset-password">Reset password</a></p>
       </div>
     </form>
